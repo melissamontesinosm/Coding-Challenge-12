@@ -5,8 +5,8 @@
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 //Reference HTML elements
-const color = document.getElementById('colorPicker');
-const clearButton = document.getElementById('clearCanvas');
+const color = document.getElementById('colorPicker'); // The color picker element
+const clearButton = document.getElementById('clearCanvas'); // The clear canvas button
 const shapes = document.getElementsByName('shape');
 
 let drawing = false;
@@ -44,7 +44,7 @@ function getSelectedShape() { // Function to get the selected shape
 
 function drawShape(endX, endY) { // Function to draw the selected shape
     const selectedShape = getSelectedShape();
-    ctx.strokeStyle = color.value;
+    ctx.strokeStyle = color.value; // Task 4: Set the stroke color based on the color picker
 
     ctx.beginPath(); // Start a new shape
 
@@ -79,4 +79,10 @@ function drawCircle(endX, endY) { // Function to draw circle
     const radius = Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
     ctx.arc(startX, startY, radius, 0, 2 * Math.PI);
 }
+
+// Task 4: Add Color Selection and Canvas Clearing
+
+clearButton.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the entire canvas
+});
 
