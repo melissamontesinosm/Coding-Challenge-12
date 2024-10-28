@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cherry Bomb </title>
+    <style>
+        #drawingCanvas {
+            border: 1.5px solid brown;
+            cursor: crosshair;
+        }
+
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: rgb(237, 214, 158);
+        }
+
+        h1{
+            color: brown;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> Cherry Bomb Designs </h1>
+
+   <div>
+        <canvas id="myCanvas" width = "800" height= "600"></canvas>
+   </div>
+   <div>
+        <input type="radio" name="tool" value="line" id="line" checked> <label for="line">Line</label> 
+        <input type="radio" name="tool" value="rectangle" id="rectangle"><label for="rectangle">Rectangle</label>
+        <input type="radio" name="tool" value="circle" id="circle"><label for="circle">Circle</label>
+        <input type="color" id="colorPicker">  <label for="colorPicker">Choose a color:</label>
+
+        <button id="clearCanvas">Clear Canvas</button>
+   </div>
+    <script src= "app.js"></script>
+</body>
+</html>
